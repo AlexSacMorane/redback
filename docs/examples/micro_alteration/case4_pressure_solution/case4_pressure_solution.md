@@ -659,6 +659,37 @@ Different types of output are generated at the initial and final conditions (see
 
 ## Results
 
+The first result is the movie showing the shape evolution of the grains and diffusion of the dilute specimen.
+As expected, dissolution occurs at the contact level, the solute diffuses, and some precipitation occurs in the pore space.
+
+<video controls width="700" src="Case4_PressureSolution.mp4"></video>
+
+Then, the time evolution of the center of gravity of the grain can be employed to notice a creep behavior, common for the pressure-solution phenomenon.
+
+<a id="fig-time-cog"></a>
+
+![Creep behavior due to the pressure-solution](fig_cog.png){ width="80%" }
+
+***Figure 5.** Creep behavior due to the pressure-solution*
+
+It is worth noting that the rate of the creep behavior decreases. 
+This slowdown of the pressure-solution creep is caused by (1) a chemical mechanism (solute saturation of the pore space) or (2) a mechanical one (decrease of the pressure transmitted at the contact). 
+
+The evolution of the variables (phase and solute) reveals that a temporary steady-state is reached by the system (the same amount of solid dissolves and precipitates).
+
+<a id="fig-variables"></a>
+
+![Time evolution of the variables (phase and solute)](fig_variables.png){ width="80%" }
+
+***Figure 6.** Time evolution of the variables (phase and solute)*
+
+As the contact area increases during the pressure-dissolution phenomenon, the pressure transmitted (and the solid activity) decreases.
+
+<a id="fig-as"></a>
+
+![Time evolution of the solid activity at the contact](fig_as.png){ width="80%" }
+
+***Figure 7.** Time evolution of the solid activity at the contact*
 
 
 # References
