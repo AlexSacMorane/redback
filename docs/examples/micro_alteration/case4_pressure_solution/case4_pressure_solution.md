@@ -28,7 +28,7 @@ The dissolution/precipitation of the solid phase can be described by an Allen-Ca
 This equation is applied to a phase variable $\eta$ ($=1$ if the point corresponds to the solid phase, $=0$ if the point corresponds to the pore space).
 
 \[
-    \frac{\partial\eta}{\partial t}=-L\,\frac{\partial\left(f_{loc}+E_d\right)}{\partial \eta} + L\cdot\kappa\,\nabla^2\eta
+    \frac{\partial\eta}{\partial t}=-L\,\frac{\partial\left(f_{loc}+E\right)}{\partial \eta} + L\cdot\kappa\,\nabla^2\eta
     \label{Equation Allen Cahn}
     \tag{1}
 \]
@@ -55,7 +55,7 @@ The amplitude of the tilting is dictated by the value of a new variable $c$ that
 In the context of this model, the propagation of this solute is described by Eq. 3.
 
 \[
-    \frac{\partial c}{\partial t} = -\alpha_\textit{source} \frac{\partial \textit{source}}{\partial t} -\alpha_\textit{product} \frac{\partial \textit{product}}{\partial t} + \kappa_c \nabla^2 c
+    \frac{\partial c}{\partial t} = -\alpha_\eta \frac{\partial \eta}{\partial t} + \kappa_c \nabla^2 c
     \label{Equation Diffusion c}
     \tag{3}
 \]
