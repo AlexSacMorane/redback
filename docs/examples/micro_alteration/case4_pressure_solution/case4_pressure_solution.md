@@ -1,6 +1,10 @@
 # Coupling the Phase-Field approach with a Discrete Element Model to investigate Pressure-Solution
 
-TO DO add download / figure free energy / links with repositories / glow up figures
+TO DO figure free energy / links with repositories / glow up figures
+
+
+[Download the files](./case4_pressure_solution_files.zip)
+
 
 ## Problem description
 
