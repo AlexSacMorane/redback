@@ -115,9 +115,35 @@ In a more complex configuration (which is common in the literature), this reorga
 
 ### Description of the Phase-Field Discrete Element Method
 
+The data exchange and global scheme of the Phase-Field Discrete Element Method are depicted in [Figure 3].
+In summary, the Discrete Element Model is used to compute a mechanical steady-state, whereas the Phase-Field disturbs this equilibrium by changing the shape of the grains.
+
+<a id="fig-pfdem"></a>
+
+![Concept of the Phase-Field Discrete Element Method](fig_pfdem.png)
+
+***Figure 3:** Concept of the Phase-Field Discrete Element Method.*
+
+In particular, a grain detection algorithm is employed to ascertain the novel grain shape based on the Phase-Field outputs.
+These polygonal particles are used in the Discrete Element Model to compute the new mechanical steady-state.
+Once this new granular organization is determined, new phase maps are interpolated in order to update the geometry of the Phase-Field problem.
+Simultaneously, the tilting term $e_d$ is determined through the solid activity $a_s=F/S$, where $S$ is the contact surface.
+
 ---
 
 ## Model set up
+
+### A two-solvers approach
+
+As depicted in [Figure 3], the Phase-Field Discrete Element Method consists in coupling two distinct approaches: the Phase-Field and the Discrete Element Model.
+Thus, the global approach is based on a first-layer code that is able to generate, call, and read second-layer codes that are used for the Phase-Field and the Discrete Element Model.
+
+The first-layer code presented herein is a Python script and follows the structure
+described in Algorithm 1.
+
+<a id="algo-firstlayer"></a>
+
+![Structure of the first-layer script.](fig_algorithm1.png)
 
 ---
 
