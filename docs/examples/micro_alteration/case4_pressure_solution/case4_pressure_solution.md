@@ -497,8 +497,6 @@ Concerning the function `DerivativeParsedMaterial`, it is divided into several m
 - `constant_names`: the definition of the constants used in the `expression` of the free energy. The values of these constants are specified with `constant_expressions`
 - `derivative_order` (only for `DerivativeParsedMaterial`): the derivatives of this function (until this order) are automatically computed
 
-The function `GenericFunctionMaterial` build the field of the variable based on the data available in the related .txt file.
-
 ```
 [Materials]
   # constants of the problem
@@ -561,6 +559,30 @@ The function `GenericFunctionMaterial` build the field of the variable based on 
     derivative_order = 2
     outputs = exodus
   [../]
+[]
+```
+
+The function `GenericFunctionMaterial` build the field of the variable based on the data available in the related .txt file.
+An additional `Functions` block is required.
+
+```text
+[Functions]
+  [eta_1_txt]
+    type = PiecewiseMultilinear
+    data_file = MOOSE_simulation/eta_1_map.txt
+  []
+  [c_txt]
+    type = PiecewiseMultilinear
+    data_file = MOOSE_simulation/c_map.txt
+  []
+	[as_txt]
+		type = PiecewiseMultilinear
+		data_file = MOOSE_simulation/as_map.txt
+	[]
+	[kc_txt]
+		type = PiecewiseMultilinear
+		data_file = MOOSE_simulation/kc_map.txt
+	[]
 []
 ```
 
