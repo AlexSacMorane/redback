@@ -1,7 +1,6 @@
 # Coupling the Phase-Field approach with a Discrete Element Model to investigate Pressure-Solution
 
-TO DO figure free energy / links with repositories 
-
+TO DO figure free energy 
 
 [Download the files](./case4_pressure_solution_files.zip)
 
@@ -268,7 +267,7 @@ The stress transmission at the final state is also used to determine the tilting
 
 The next step is to prepare the Phase-Field simulation. 
 The main philosophy of this part is depicted in the following. 
-The details of the functions called will not be described in this tutorial, but are available in the online repository (TO DO make link).
+The details of the functions called will not be described in this tutorial, but are available in the [online repository](https://github.com/AlexSacMorane/redback/blob/docs/setup-mkdocs/examples/micro_alteration/case4_PFDEM/prepare_pf_lib.py).
 In brief, this preparation step consists of updating the phase variable field, updating the solute field, characterizing the contact, computing the solid activity field, and computing the diffusivity field.
 
 ```text
@@ -362,7 +361,7 @@ def run_pf(dict_user, dict_sample):
 ```
 
 In brief, the script writes the required files, calls the input file, sorts the output, and reads the maps to update the variables.
-More details on the functions are available in the online repository (TO DO link to file).
+More details on the functions are available in the [online repository](https://github.com/AlexSacMorane/redback/blob/docs/setup-mkdocs/examples/micro_alteration/case4_PFDEM/run_pf_lib.py).
 A particular focus is made in the following on the file employed as a template to generate the input for the MOOSE simulation.
 
 As depicted in Figure 1, the model simulates the dissolution/precipitation of a solid and the diffusion of the dilute specimen. 
